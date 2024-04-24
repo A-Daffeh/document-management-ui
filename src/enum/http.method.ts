@@ -7,4 +7,4 @@ export enum Http {
     POST = 'POST',
     PUT = 'PUT',
     TRACE = 'TRACE'
-}   
+}

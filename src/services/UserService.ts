@@ -180,7 +180,7 @@ export const userAPI = createApi({
         }),
         verifyToken: builder.mutation<IResponse<User>, string>({
             query: (token) => ({
-                url: `/verify/resetpassword?token=${token}`,
+                url: `/verify/resetpassword?key=${token}`,
                 method: Http.GET
             }),
             transformResponse: processResponse<User>,

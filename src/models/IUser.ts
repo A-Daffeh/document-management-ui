@@ -13,7 +13,7 @@ export interface IUser {
     credentialsNonExpired: boolean;
     lastLogin: string | number | Date;
     enabled: boolean;
-    is_mfa: boolean;
+    mfa: boolean;
     createdAt: string;
     updateAt: string;
     createdBy: number;

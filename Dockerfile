@@ -1,7 +1,5 @@
 FROM node:18 as build
 
-RUN npm install --global
-
 WORKDIR /app
 COPY . .
 

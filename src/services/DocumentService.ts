@@ -5,7 +5,9 @@ import { isJsonContentType, processError, processResponse } from '../utils/reque
 import { Page } from '../models/IPage';
 import { Document, DocumentForm, Documents, Query } from '../models/IDocument';
 
-const baseUrl = 'http://localhost:8085/documents';
+import process from 'process';
+
+const baseUrl = process.env.REACT_APP_API_URL + '/documents';
 
 export const documentAPI = createApi({
     reducerPath: 'documentAPI',

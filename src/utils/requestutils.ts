@@ -1,8 +1,10 @@
 import { IResponse } from '../models/Response';
 import { toastSuccess, toastError } from '../services/ToastService';
 import { Key } from '../enum/cache.key';
+import process from 'process';
 
-export const baseUrl = 'http://localhost:8085/user';
+export const baseUrl = process.env.REACT_APP_API_URL + '/user';
+
 export const isJsonContentType = (headers: Headers) => ['application/vnd.api+json', 'application/json', 'application/vnd.hal+json', 'application/pdf', 'multipart/form-data'].includes(headers.get('content-type')?.trim()!);
 
 export const processResponse = <T>(response: IResponse<T>, meta: any, arg: unknown): IResponse<T> => {

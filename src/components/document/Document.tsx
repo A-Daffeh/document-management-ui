@@ -4,7 +4,8 @@ import { Link } from 'react-router-dom';
 
 const Document: React.FC<IDocument> = document => {
     return (
-        <Link to={`/documents/${document.documentId}`} className="candidate-list-box card mt-4">
+        <Link to={`/documents/${document.document_Id}`} className="candidate-list-box card mt-4">
+            
             <div className="card-body">
                 <div className="align-items-center row">
                     <div className="col-auto">

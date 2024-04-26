@@ -10,7 +10,7 @@ export interface IDocument {
     referenceId: string;
     ownerLastLogin: string;
     updaterName: string;
-    documentId: string;
+    document_Id: string;
     createdAt: string;
     updatedAt: string;
     ownerName: string;

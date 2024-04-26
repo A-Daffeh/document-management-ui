@@ -1,6 +1,6 @@
 FROM node:18 as build
 
-RUN yarn global add pnpm
+RUN npm install --global pnpm
 
 WORKDIR /app
 COPY . .
@@ -10,8 +10,8 @@ RUN touch .env
 RUN echo "REACT_APP_API_URL=$REACT_APP_API_URL" >> .env
 RUN cat .env
 
-RUN npm i
-RUN npm run build
+RUN pnpm i
+RUN pnpm run build
 
 FROM nginx:latest
 
